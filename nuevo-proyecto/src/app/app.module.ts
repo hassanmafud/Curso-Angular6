@@ -2,12 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { SaludadorComponent } from './saludador/saludador.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SaludadorComponent
+    AppComponent
   ],
   imports: [
     BrowserModule
