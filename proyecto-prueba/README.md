@@ -1,3 +1,3 @@
 # Vista Previa
 
-proyecto-prueba/Vista Previa
+ https://nuevo-proyecto.vercel.app/
