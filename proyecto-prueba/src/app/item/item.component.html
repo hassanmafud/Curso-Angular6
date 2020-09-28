@@ -1,21 +1,10 @@
-<table class="table">
-		  <thead>
-		  	<tr class="row" *ngIf="!mostrarUno()">
+<div class="card-content">
+		<div class="card-img">
+			<img [src]='item.img' alt="" >
+			<span><h4>{{item.id}}</h4></span>
+		</div>
+		<div class="card-desc">
+			<h3>{{item.descripcion | uppercase}}</h3>
+		</div>
 
-		      <th class="col-6 text-center" >ID</th>
-		      <th class="col-6 text-center" >Descripcion</th>
-		      	
-		    </tr>
-		  </thead>
-		  <tbody >
-		    <tr class="row">
-		    		<td class="col-6 text-center">
-		    		{{id}}
-		    		</td>
-		    		<td class="col-6 text-center">
-		    		{{descripcion}}
-		    		</td>
-		    </tr>
-		  </tbody>
-</table>
-
+</div>

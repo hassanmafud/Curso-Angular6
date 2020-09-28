@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Item} from './../models/item.model';
 
 @Component({
   selector: 'app-listado-items',
@@ -7,24 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListadoItemsComponent implements OnInit {
 	title='Listado de Items';
+  listado: Item[] ;
 
-	listado: any[] =[
-    { id: 0, descripcion: 'Grabadores' },
-    { id: 1, descripcion: 'Accesorios' },
-    { id: 2, descripcion: 'Audio' },
-    { id: 3, descripcion: 'Celulares' },
-    { id: 4, descripcion: 'Cuidado Personal' },
-    { id: 5, descripcion: 'Dvd' },
-    { id: 6, descripcion: 'Fotografia' },
-    { id: 7, descripcion: 'Frio-Calor' },
-    { id: 8, descripcion: 'Gps' },
-    { id: 9, descripcion: 'Informatica' },
-    { id: 10, descripcion: 'Led - Lcd' }
-  	];
-
-  constructor() {}
+  constructor() {
+    this.listado = [];
+  }
 
   ngOnInit(): void {
+  }
+
+  guardar(id: number, descripcion:string , img:string): boolean{
+    this.listado.push(new Item(id, descripcion, img));
+    console.log(this.listado);
+    return false;
   }
 
 }

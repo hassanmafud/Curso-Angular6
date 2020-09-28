@@ -1,4 +1,5 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input, HostBinding} from '@angular/core';
+import {Item} from './../models/item.model';
 
 @Component({
   selector: 'app-item',
@@ -6,20 +7,15 @@ import { Component, OnInit, Input} from '@angular/core';
   styleUrls: ['./item.component.css']
 })
 export class ItemComponent implements OnInit {
-	@Input() id:number;
-	@Input() descripcion:string;
-	mostrar = true;
-	
+	@Input() item:Item;
+  	@HostBinding('attr.class') cssClass="col-md-4";
 
   constructor() {}
 
   ngOnInit(): void {
   }
 
-  mostrarUno(): boolean{
-  	return (this.mostrar =!this.mostrar);
-
-  }
+  
   
 
 }
