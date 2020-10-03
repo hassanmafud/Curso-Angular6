@@ -22,7 +22,7 @@ export class ListaDestinosComponent implements OnInit {
     console.log(this.destinos);
     return false;
   }
-
+  
   elegido(d: DestinoViaje) {
     this.destinos.forEach( function (x) {
       x.setSelected(false);
