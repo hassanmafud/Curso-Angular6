@@ -24,7 +24,7 @@ export class ListaDestinosComponent implements OnInit {
   }
 
   elegido(d: DestinoViaje) {
-    this.destinos.forEach(function (x) {
+    this.destinos.forEach( function (x) {
       x.setSelected(false);
     });
     d.setSelected(true);

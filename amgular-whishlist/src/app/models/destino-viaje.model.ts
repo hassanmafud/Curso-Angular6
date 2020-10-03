@@ -7,7 +7,7 @@ export class DestinoViaje{
 	isSelected(): boolean{
 		return this.selected;
 	}
-	setSelected(s: boolean){
+	setSelected(s: boolean): void{
 		this.selected == s;
 	}
 }

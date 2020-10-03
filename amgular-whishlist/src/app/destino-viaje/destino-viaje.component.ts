@@ -12,7 +12,7 @@ export class DestinoViajeComponent implements OnInit {
 	@Output() clicked: EventEmitter<DestinoViaje>;
 
   	constructor() {
-		this.clicked = new EventEmitter();
+		this.clicked= new EventEmitter();
 	}
 
  	ngOnInit(): void {
