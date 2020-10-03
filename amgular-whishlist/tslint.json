@@ -23,8 +23,8 @@
     ],
     "import-spacing": true,
     "indent": {
-      "options": [
-        "spaces"
+      "options": [ 
+        "spaces" 
       ]
     },
     "max-classes-per-file": false,
