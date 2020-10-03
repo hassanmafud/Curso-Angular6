@@ -9,10 +9,10 @@ import {DestinoViaje} from './../models/destino-viaje.model';
 export class DestinoViajeComponent implements OnInit {
 	@Input() destino: DestinoViaje;
 	@HostBinding('attr.class') cssClass = 'col-md-4';
-	@Output() clicked:EventEmitter<DestinoViaje>;
+	@Output()	clicked: EventEmitter<DestinoViaje>;
 
-  	constructor() {
-		this.clicked= new EventEmitter();
+	constructor() {
+		this.clicked = new EventEmitter();
 	}
 
  	ngOnInit(): void {
