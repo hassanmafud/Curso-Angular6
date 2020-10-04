@@ -10,10 +10,17 @@ import {DestinosApiClient} from './../models/destinos-api-client.model'
 })
 export class ListaDestinosComponent implements OnInit {
   @Output() onItemAdded :EventEmitter<DestinoViaje>;
+  updates: string [];
   //destinos: DestinoViaje[];
 
   constructor(public destinosApiClient: DestinosApiClient) {
     this.onItemAdded =  new EventEmitter();
+    this.updates = [];
+    this.destinosApiClient.subscribeOnChange((d: DestinoViaje) => {
+      if (d != null){
+        this.updates.push("Se ha elegido a" + d.nombre);
+      }
+    });
   }
 
   ngOnInit(): void {
@@ -25,8 +32,7 @@ export class ListaDestinosComponent implements OnInit {
     }
   
   elegido(e:DestinoViaje) {
-    this.destinosApiClient.getAll().forEach( x => x.setSelected(false));
-    e.setSelected(true);
+    this.destinosApiClient.elegir(e);
   }
 
 }
