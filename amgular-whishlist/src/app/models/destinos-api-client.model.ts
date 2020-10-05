@@ -1,9 +1,9 @@
-import { BehaviorSubject, Subject } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { AppState } from '../app.module';
 import {DestinoViaje} from './destino-viaje.model';
 
 export class DestinosApiClient {
     destinos: DestinoViaje [];
-    current: Subject<DestinoViaje> = new BehaviorSubject<DestinoViaje>(null);
     constructor() {
         this.destinos = [];
     }
@@ -21,11 +21,7 @@ export class DestinosApiClient {
     elegir(d: DestinoViaje){
         this.destinos.forEach(x => x.setSelected(false));
         d.setSelected(true);
-        // this.current.next(d);
     }
 
-    // subscribeOnChange(fn){
-    //     this.current.subscribe(fn);
-    // }
-
+   
 }
