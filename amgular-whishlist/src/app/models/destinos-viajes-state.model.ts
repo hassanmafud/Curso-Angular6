@@ -23,8 +23,8 @@ export const initializeDestinosViajesState = () => ({
 
 // ACCIONES
 export enum DestinosViajesActionTypes {
-    NUEVO_DESTINO= '[Destinos Viajes  Nuevo',
-    ELEGIDO_FAVORITO= '[Destinos Viajes ] Favorito'
+    NUEVO_DESTINO= '[Destinos Viajes]  Nuevo',
+    ELEGIDO_FAVORITO= '[Destinos Viajes] Favorito',
 }
 
 export class NuevoDestinoAction implements Action {

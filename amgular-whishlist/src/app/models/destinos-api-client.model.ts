@@ -16,16 +16,16 @@ export class DestinosApiClient {
     }
 
     getById(id: String): DestinoViaje {
-        return this.destinos.filter(function(d){ return d.id.toString() === id; })[0];
+        return this.destinos.filter((d) => d.id.toString() === id)[0];
     }
     elegir(d: DestinoViaje){
         this.destinos.forEach(x => x.setSelected(false));
         d.setSelected(true);
-        this.current.next(d);
+        // this.current.next(d);
     }
 
-    subscribeOnChange(fn){
-        this.current.subscribe(fn);
-    }
+    // subscribeOnChange(fn){
+    //     this.current.subscribe(fn);
+    // }
 
 }
