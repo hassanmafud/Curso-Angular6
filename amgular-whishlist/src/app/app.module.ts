@@ -3,8 +3,7 @@ import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {StoreModule as NgRxStoreModule, ActionReducerMap} from '@ngrx/store';
-import {StoreDevtoolsModule} from '@ngrx/store-devtools';
-
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 
 import { AppComponent } from './app.component';
 import { DestinoViajeComponent } from './destino-viaje/destino-viaje.component';
@@ -14,6 +13,7 @@ import { FormDestinoViajeComponent } from './form-destino-viaje/form-destino-via
 import { DestinosApiClient } from './models/destinos-api-client.model';
 import { DestinosViajesState, initializeDestinosViajesState, reducerDestinosViajes, DestinosViajesEffects } from './models/destinos-viajes-state.model';
 import {EffectsModule} from '@ngrx/effects';
+
 
 
 
@@ -57,7 +57,7 @@ const reducersInitialState = {
     RouterModule.forRoot(routes),
     NgRxStoreModule.forRoot(reducers, { initialState: reducersInitialState }),
     EffectsModule.forRoot([DestinosViajesEffects]),
-    StoreDevtoolsModule.instrument()
+    StoreDevtoolsModule.instrument(),
   ],
   providers: [
     DestinosApiClient
