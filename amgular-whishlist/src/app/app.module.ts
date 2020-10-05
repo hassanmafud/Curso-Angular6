@@ -16,9 +16,6 @@ import {EffectsModule} from '@ngrx/effects';
 
 
 
-
-
-
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: ListaDestinosComponent},
@@ -55,7 +52,7 @@ const reducersInitialState = {
     ReactiveFormsModule,
     FormsModule,
     RouterModule.forRoot(routes),
-    NgRxStoreModule.forRoot(reducers, {initialState: reducersInitialState }),
+    NgRxStoreModule.forRoot(reducers, { initialState: reducersInitialState }),
     EffectsModule.forRoot([DestinosViajesEffects])
   ],
   providers: [

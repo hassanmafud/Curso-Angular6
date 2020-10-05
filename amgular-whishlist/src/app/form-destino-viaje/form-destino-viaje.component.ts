@@ -13,7 +13,7 @@ import { DestinoViaje } from '../models/destino-viaje.model';
 export class FormDestinoViajeComponent implements OnInit {
   @Output() onItemAdded : EventEmitter<DestinoViaje>;
   fg: FormGroup;
-  minLongitud= 3 ;
+  minLongitud = 3 ;
   searchResults: string [];
 
   constructor(fb: FormBuilder) {
@@ -28,10 +28,9 @@ export class FormDestinoViajeComponent implements OnInit {
     });
    }
 
-  ngOnInit(): void {
-    let elemNombre = <HTMLInputElement>document.getElementById('nombre');
-    fromEvent(elemNombre, 'input')
-    .pipe(
+  ngOnInit(){
+    const elemNombre = document.getElementById('nombre') as HTMLInputElement;
+    fromEvent(elemNombre, 'input').pipe(
       map((e: KeyboardEvent) => (e.target as HTMLInputElement).value),
       filter(text => text.length > 2),
       debounceTime(200),
@@ -44,24 +43,21 @@ export class FormDestinoViajeComponent implements OnInit {
   }
 
   guardar(nombre: string , url: string): boolean{
-    let d = new DestinoViaje(nombre, url);
+    const d = new DestinoViaje(nombre, url);
     this.onItemAdded.emit(d);
     return false;
   }
- 
   nombreValidator(control: FormGroup): { [s: string]: boolean} {
     const l =  control.value.toString().trim().length;
     if (l > 0 && l < 5 ){
       return {invalidNombre: true};
-      
     }
     return null;
   }
-
   nombreValidatorParametrizable(minLong: number): ValidatorFn {
-    return ( control: FormGroup): { [s: string]: boolean }| null =>{
-      const l =  control.value.toString().trim().length
-      if(l > 0 && l < minLong){
+    return ( control: FormGroup): { [s: string]: boolean }| null => {
+      const l =  control.value.toString().trim().length;
+      if (l > 0 && l < minLong){
         return {minLongNombre: true};
       }
       return null;

@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class AppComponent {
   title = 'amgular-whishlist';
   time = new Observable(observer => {
-    setInterval(() => observer.next(new Date().toString()), 1000)
+    setInterval(() => observer.next(new Date().toString()), 1000);
   });
 
 

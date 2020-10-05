@@ -10,7 +10,7 @@
 			<ul>
 				<li *ngFor="let s of destino.servicios">
 					<span [ngSwitch]="s">
-						<i *ngSwitchCase= "'desayuno'" style="color: red;">{{s}}</i>
+						<i *ngSwitchCase="'desayuno'" style="color: red;">{{s}}</i>
 						<i *ngSwitchDefault>{{s}}</i>
 					</span>
 				</li>
@@ -18,7 +18,7 @@
 				<a href="#" class="btn-card" (click)="ir()" >Ir!</a>
 				<!-- <span [style.display]="destino.isSelected()? '':'none'"> -Preferido </span> -->
 				<span *ngIf="destino.isSelected()">
-					<span ngNonBindable>{{PREFERIDO}}</span>
+					<span ngNonBindable>mostrar favorito</span>
 				</span> 
 				<a [routerLink]="['/destino']">Ver!</a>					
 		</div>
