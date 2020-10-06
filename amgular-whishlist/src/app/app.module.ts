@@ -22,7 +22,7 @@ import {EffectsModule} from '@ngrx/effects';
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: ListaDestinosComponent},
-  {path: 'destino/:id', component: DestinoDetalleComponent}
+  {path: 'destino', component: DestinoDetalleComponent}
 ];
 
 // redux init

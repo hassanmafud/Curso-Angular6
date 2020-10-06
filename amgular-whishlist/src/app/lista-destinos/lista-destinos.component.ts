@@ -11,6 +11,7 @@ import { AppState } from '../app.module';
   styleUrls: ['./lista-destinos.component.css'],
 })
 export class ListaDestinosComponent implements OnInit {
+  // tslint:disable-next-line: no-output-on-prefix
   @Output() onItemAdded: EventEmitter<DestinoViaje>;
   updates: string[];
   all;
@@ -32,16 +33,16 @@ export class ListaDestinosComponent implements OnInit {
       .select((state) => state.destinos.items)
       .subscribe((items) => (this.all = items));
   }
-  ngOnInit() { }
+  ngOnInit(): void { }
 
-  agregado(d: DestinoViaje) {
+  agregado(d: DestinoViaje): void {
     this.destinosApiClient.add(d);
     this.onItemAdded.emit(d);
   }
 
-  elegido(e: DestinoViaje) {
+  elegido(e: DestinoViaje): void {
     this.destinosApiClient.elegir(e);
   }
 
-  getAll() { }
+  getAll(): void { }
 }

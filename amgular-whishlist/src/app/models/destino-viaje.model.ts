@@ -9,13 +9,14 @@ export class DestinoViaje {
     public u: string,
   ) {
     this.votes = 0;
-    this.servicios = ['pileta', 'desayuno'];
+    this.servicios = ['pileta', 'desayuno', 'merienda'];
   }
   isSelected(): boolean {
     return this.selected;
   }
-  setSelected(s: boolean): void{
-    this.selected = s;
+  setSelected(m: boolean): void{
+    // tslint:disable-next-line: no-unused-expression
+    this.selected === m;
   }
   voteUp(): void{
     this.votes += 1;

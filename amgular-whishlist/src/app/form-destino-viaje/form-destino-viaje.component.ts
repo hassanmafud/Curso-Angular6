@@ -7,7 +7,7 @@ import { DestinoViaje } from '../models/destino-viaje.model';
 
 @Component({
   selector: 'app-form-destino-viaje',
-  templateUrl:'./form-destino-viaje.component.html',
+  templateUrl: './form-destino-viaje.component.html',
   styleUrls: ['./form-destino-viaje.component.css']
 })
 export class FormDestinoViajeComponent implements OnInit {
@@ -62,7 +62,7 @@ export class FormDestinoViajeComponent implements OnInit {
         return {minLongNombre: true};
       }
       return null;
-    }
+    };
   }
 
 }

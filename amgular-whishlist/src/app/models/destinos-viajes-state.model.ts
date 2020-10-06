@@ -81,8 +81,9 @@ export function reducerDestinosViajes(
             f.voteDown();
             return { ...state };
         }
+        default:
+            return state;
     }
-    return state;
 }
 
 // EFFECTS
