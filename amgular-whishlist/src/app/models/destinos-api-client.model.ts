@@ -7,10 +7,10 @@ import { ElegidoFavoritoAction, NuevoDestinoAction } from './destinos-viajes-sta
 @Injectable()
 export class DestinosApiClient {
     constructor(private store: Store<AppState>) {}
-    add(d: DestinoViaje) {
+    add(d: DestinoViaje): void {
         this.store.dispatch(new NuevoDestinoAction(d));
     }
-    elegir(d: DestinoViaje){
+    elegir(d: DestinoViaje): void{
         this.store.dispatch(new ElegidoFavoritoAction(d));
     }
 }

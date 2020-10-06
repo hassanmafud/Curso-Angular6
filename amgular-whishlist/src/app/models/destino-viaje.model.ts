@@ -14,13 +14,13 @@ export class DestinoViaje {
   isSelected(): boolean {
     return this.selected;
   }
-  setSelected(s: boolean) {
-    this.selected == s;
+  setSelected(s: boolean): void{
+    this.selected = s;
   }
-  voteUp() {
+  voteUp(): void{
     this.votes += 1;
   }
-  voteDown() {
+  voteDown(): void{
     this.votes -= 1;
   }
 }

@@ -11,7 +11,8 @@ import { DestinoViaje } from '../models/destino-viaje.model';
   styleUrls: ['./form-destino-viaje.component.css']
 })
 export class FormDestinoViajeComponent implements OnInit {
-  @Output() onItemAdded : EventEmitter<DestinoViaje>;
+  // tslint:disable-next-line: no-output-on-prefix
+  @Output() onItemAdded: EventEmitter<DestinoViaje>;
   fg: FormGroup;
   minLongitud = 3 ;
   searchResults: string [];
@@ -28,7 +29,7 @@ export class FormDestinoViajeComponent implements OnInit {
     });
    }
 
-  ngOnInit(){
+  ngOnInit(): void{
     const elemNombre = document.getElementById('nombre') as HTMLInputElement;
     fromEvent(elemNombre, 'input').pipe(
       map((e: KeyboardEvent) => (e.target as HTMLInputElement).value),
