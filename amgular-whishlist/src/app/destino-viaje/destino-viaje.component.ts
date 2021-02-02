@@ -30,18 +30,18 @@ export class DestinoViajeComponent implements OnInit {
     this.onclicked = new EventEmitter();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(){ }
 
-  ir(): boolean{
+  ir(){
     this.onclicked.emit(this.destino);
     return false;
   }
 
-  voteUp(): boolean{
+  voteUp(): boolean {
     this.store.dispatch(new VoteUpAction(this.destino));
     return false;
   }
-  voteDown(): boolean{
+  voteDown(): boolean {
     this.store.dispatch(new VoteDownAction(this.destino));
     return false;
   }
