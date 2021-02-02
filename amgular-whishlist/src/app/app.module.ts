@@ -13,6 +13,10 @@ import { FormDestinoViajeComponent } from './components/form-destino-viaje/form-
 import { DestinosApiClient } from './models/destinos-api-client.model';
 import { DestinosViajesState, initializeDestinosViajesState, reducerDestinosViajes, DestinosViajesEffects } from './models/destinos-viajes-state.model';
 import {EffectsModule} from '@ngrx/effects';
+import { LoginComponent } from './components/login/login/login.component';
+import { ProtectedComponent } from './components/protected/protected/protected.component';
+import { UsuarioLogeadoGuard } from './guards/usuario-logueado/usuario-logeado.guard';
+import { AuthService } from './services/auth.service';
 
 
 
@@ -22,7 +26,9 @@ import {EffectsModule} from '@ngrx/effects';
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: ListaDestinosComponent},
-  {path: 'destino', component: DestinoDetalleComponent}
+  {path: 'destino/:id', component: DestinoDetalleComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'protected', component: ProtectedComponent, canActivate: [ UsuarioLogeadoGuard]}
 ];
 
 // redux init
@@ -48,7 +54,9 @@ const reducersInitialState = {
     DestinoViajeComponent,
     ListaDestinosComponent,
     DestinoDetalleComponent,
-    FormDestinoViajeComponent
+    FormDestinoViajeComponent,
+    LoginComponent,
+    ProtectedComponent
   ],
   imports: [
     BrowserModule,
@@ -60,6 +68,8 @@ const reducersInitialState = {
     StoreDevtoolsModule.instrument(),
   ],
   providers: [
+    AuthService,
+    UsuarioLogeadoGuard,
     DestinosApiClient
   ],
   bootstrap: [AppComponent]
