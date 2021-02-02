@@ -11,17 +11,17 @@ export class DestinoViaje {
     this.servicios = ['pileta', 'desayuno', 'merienda'];
     this.votes = 0;
   }
+  setSelected(m: boolean){
+    this.selected == m;
+  }
   isSelected(): boolean {
     return this.selected;
-  }
-  setSelected(m: boolean): void {
-    // tslint:disable-next-line: no-unused-expression
-    this.selected === m;
-  }
-  voteUp(){
-    this.votes++;
   }
   voteDown(){
     this.votes--;
   }
+  voteUp(){
+    this.votes++;
+  }
+ 
 }

@@ -21,7 +21,6 @@ import { DestinoViaje } from './../models/destino-viaje.model';
 })
 export class DestinoViajeComponent implements OnInit {
   @Input() destino: DestinoViaje;
-  // tslint:disable-next-line: no-input-rename
   @Input('idx') position: number;
   @HostBinding('attr.class') cssClass = 'col-md-4';
   @Output() onclicked: EventEmitter<DestinoViaje>;

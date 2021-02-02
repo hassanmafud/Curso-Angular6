@@ -59,7 +59,7 @@ export function reducerDestinosViajes(
     case DestinosViajesActionTypes.NUEVO_DESTINO: {
       return {
         ...state,
-        items: [...state.items, (action as NuevoDestinoAction).destino],
+        items: [...state.items, (action as NuevoDestinoAction).destino]
       };
     }
     case DestinosViajesActionTypes.ELEGIDO_FAVORITO: {
@@ -68,7 +68,7 @@ export function reducerDestinosViajes(
       fav.setSelected(true);
       return {
         ...state,
-        favorito: fav,
+        favorito: fav
       };
     }
     case DestinosViajesActionTypes.VOTE_UP: {
@@ -81,7 +81,6 @@ export function reducerDestinosViajes(
       d.voteDown();
       return { ...state };
     }
-    default:
   }
   return state;
 }
