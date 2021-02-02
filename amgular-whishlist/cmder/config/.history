@@ -1,0 +1,172 @@
+pav
+nvm install latest
+node -version
+nvm use 14.11.0
+node use 12.18.3
+nvm use 12.18.0
+nvm use 12.18.3
+node
+npm install -g typescript
+npm install -g  @angular/cli
+new --help
+cd C:\UTN\PAV II
+ls -l
+ng -version
+ng --v
+ng install @Angular/cli 10.1.1
+npm install -g  @angular/cli 10.1.1
+npm install -g  @angular/cli@10.1.1
+ng -v
+ng v
+ng new --help
+node --version
+npm list
+nvm v
+npm v
+nvm list
+nvm --version
+ng --version
+cd hassa
+cd hassa\
+cd Desktop
+cd...
+cd Proyectos/angular6
+cd Proyectos/angular6/
+cd Proyecto/angular6/
+cd Proyecto/angular6/Curso-Angular6/*
+cd Proyecto/angular6/Curso-Angular6/
+cd Proyecto/angular6/Curso-Angular6
+cd Curso-Angular6/
+gh status
+status
+cd Curso-angular6
+cd .. /..
+cd Proyecto/angular6
+ng new angular-hola-mundo
+git add -a
+git commit -m "Primera app angular"
+cls
+cd .
+cd Proyecto/angular6/curso-angular6
+generate component saludador
+ng generate component saludador
+ng new nuevo-proyecto
+git commit -m "Agregamos saludador"
+ng serve 
+cd proyecto/angular6
+cd nuevo proyecto
+ng generte component prueba
+cd protecto/angular6/curso-angular6
+ng generate component prueba
+cd..ç
+git commit -m "Se creo un nuevo proyecto con el componente prueba"
+npm -v
+ng version
+cd hassa/
+cd/utn
+cd pav ii
+ng new pymes4K5
+cd utn/pav ii/
+cd utn/pav
+cd utn/pav ii/pymes4k5
+ng install bootstrap jquery popper.js 
+npm install bootstrap jquery popper.js 
+cd proyecto/angular/curso-angular6
+cd src
+cd src/
+cd app/
+cd angular-hola-mundo/
+npm i -s bootstrap
+cd angular6-hola-mundo
+cd angular-hola-mundo
+cd .. 
+cd ./proyecto
+cd ../proyecto
+cd angular6/curso-angular6/angular-hola-mundo
+git commit -m "Clase bootstrap"
+cd ../nuevo-proyecto
+npm i -s @bootstrap
+cd Proyecto\angular6\Curso-Angular6\nuevo-proyecto
+cd ../../Proyecto\angular6\Curso-Angular6\nuevo-proyecto
+ng serve -o
+node -v
+cd nodejs-ejemplo
+ñs
+npm install express -g
+touch app.js
+npm install express
+node app.js
+sudo psw
+mkdir
+mkdir casa
+mkdir -r casa
+rmdir -r casa
+cd UTN/
+cd Pav ii
+cd pymes4k5
+ng g s services/MockArticulosFamilias
+ng g s services/ArticulosFamilias
+npm install @angular/router
+ng g c components/Menu
+cd angular6
+cd curso-angular
+cd curso-angular6
+git commit -m "cambios" 
+git fetch origin
+cd proyect-prueba
+git pull
+ng build -target=production --base-href /
+ng build --target= production --base-href /
+ng build --target=production --base-href /
+cd angular-whishlist
+cd amgular-wishlist
+cd amgular-whishlist
+git commit -m "Agregamos Models"
+git commit -m "Listado de Items super Ok"
+git add -A
+git commit -m "cambios finales "
+git push
+git config --get remote.origin.url
+ng build --target = proyecto-prueba --base-href /
+ng build --target =production --base-href /
+ng build --target = production --base-href /
+An unhandled exception occurred: Project 'production' does not exist.
+ng serve --o
+ng build  proyecto-prueba--base-href /
+ng build proyecto-prueba--base-href /
+ng build proyecto-prueba--base-href / 
+ng serve --
+ng serve
+ng build production --base-href /
+ng build proyecto-prueba --base-href /
+ng build proyecto-prueba --prod --base-href /
+ng build proyecto-prueba --prod
+ng build --prod
+cd proyecto/angular6/curso-angular6
+cd proyecto-prueba
+ls dist/
+/
+explore .
+ng build --prod --base-href /
+npm install -g now
+cd dist
+cd nuevo-proyecto
+now
+cd proyecto/angular6/curso-angular6/proyecto-prueba
+git statusç
+git status
+cd express
+psw
+clear
+cs
+cd 
+cd hassan
+cd c
+cd..
+cd
+cd users/hassa
+cd proyecto
+cd angular
+cd ..
+ls
+explorer .
