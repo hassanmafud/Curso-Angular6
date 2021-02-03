@@ -167,6 +167,10 @@ cd
 cd users/hassa
 cd proyecto
 cd angular
-cd ..
 ls
 explorer .
+cd ..
+ng g c components/vuelos/vuelos-component
+ng g c components/vuelos/vuelos-main-component
+ng g c components/vuelos/vuelos-mas-info-component
+ng g c components/vuelos/vuelos-detalle-component

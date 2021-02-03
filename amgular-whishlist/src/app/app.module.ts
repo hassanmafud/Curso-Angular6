@@ -17,10 +17,17 @@ import { LoginComponent } from './components/login/login/login.component';
 import { ProtectedComponent } from './components/protected/protected/protected.component';
 import { UsuarioLogeadoGuard } from './guards/usuario-logueado/usuario-logeado.guard';
 import { AuthService } from './services/auth.service';
+import { VuelosComponentComponent } from './components/vuelos/vuelos-component/vuelos-component.component';
+import { VuelosMainComponentComponent } from './components/vuelos/vuelos-main-component/vuelos-main-component.component';
+import { VuelosMasInfoComponentComponent } from './components/vuelos/vuelos-mas-info-component/vuelos-mas-info-component.component';
+import { VuelosDetalleComponentComponent } from './components/vuelos/vuelos-detalle-component/vuelos-detalle-component.component';
 
-
-
-
+export const childrenRoutesVuelos: Routes =[
+  {path: '', redirectTo: 'main', pathMatch: 'full'},
+  {path: 'main', component: VuelosMainComponentComponent},
+  {path: 'mas-info', component: VuelosMasInfoComponentComponent},
+  {path: ':id', component: VuelosDetalleComponentComponent}
+]
 
 
 const routes: Routes = [
@@ -28,7 +35,10 @@ const routes: Routes = [
   {path: 'home', component: ListaDestinosComponent},
   {path: 'destino/:id', component: DestinoDetalleComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'protected', component: ProtectedComponent, canActivate: [ UsuarioLogeadoGuard]}
+  //puedo acceder solamente si estoy logeado
+  {path: 'protected', component: ProtectedComponent, canActivate: [ UsuarioLogeadoGuard]},
+  //puedo acceder solamente si estoy logeado y ademas aunque se cargue dicho componente va a tener rutas hijas 'childrenRoutesVuelos'
+  {path: 'vuelos', component: VuelosComponentComponent, canActivate: [UsuarioLogeadoGuard], children: childrenRoutesVuelos}
 ];
 
 // redux init
@@ -56,7 +66,11 @@ const reducersInitialState = {
     DestinoDetalleComponent,
     FormDestinoViajeComponent,
     LoginComponent,
-    ProtectedComponent
+    ProtectedComponent,
+    VuelosComponentComponent,
+    VuelosMainComponentComponent,
+    VuelosMasInfoComponentComponent,
+    VuelosDetalleComponentComponent
   ],
   imports: [
     BrowserModule,
