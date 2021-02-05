@@ -163,13 +163,11 @@ cd
 cd hassan
 cd c
 cd..
-cd
 cd users/hassa
 cd proyecto
 cd angular
 ls
 explorer .
-cd ..
 ng g c components/vuelos/vuelos-component
 ng g c components/vuelos/vuelos-main-component
 ng g c components/vuelos/vuelos-mas-info-component
@@ -178,3 +176,6 @@ ng g m reservas/reservas --module -app --flat --routing
 ng g m reservas/reservas --module app --flat --routing
 ng g c reservas/reservas-listado
 ng g c reservas/reservas-detalle
+cd
+cd ..
+ng g s reservas/reservas-api-client
