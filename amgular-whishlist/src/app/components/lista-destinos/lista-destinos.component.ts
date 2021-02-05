@@ -9,6 +9,7 @@ import { AppState } from '../../app.module';
   selector: 'app-lista-destinos',
   templateUrl: './lista-destinos.component.html',
   styleUrls: ['./lista-destinos.component.css'],
+  providers: [DestinosApiClient]
 })
 export class ListaDestinosComponent implements OnInit {
   // tslint:disable-next-line: no-output-on-prefix

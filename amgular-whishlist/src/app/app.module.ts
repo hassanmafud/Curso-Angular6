@@ -10,7 +10,6 @@ import { DestinoViajeComponent } from './components/destino-viaje/destino-viaje.
 import { ListaDestinosComponent } from './components/lista-destinos/lista-destinos.component';
 import { DestinoDetalleComponent } from './components/destino-detalle/destino-detalle.component';
 import { FormDestinoViajeComponent } from './components/form-destino-viaje/form-destino-viaje.component';
-import { DestinosApiClient } from './models/destinos-api-client.model';
 import { DestinosViajesState, initializeDestinosViajesState, reducerDestinosViajes, DestinosViajesEffects } from './models/destinos-viajes-state.model';
 import {EffectsModule} from '@ngrx/effects';
 import { LoginComponent } from './components/login/login/login.component';
@@ -85,8 +84,7 @@ const reducersInitialState = {
   ],
   providers: [
     AuthService,
-    UsuarioLogeadoGuard,
-    DestinosApiClient
+    UsuarioLogeadoGuard
   ],
   bootstrap: [AppComponent]
 })

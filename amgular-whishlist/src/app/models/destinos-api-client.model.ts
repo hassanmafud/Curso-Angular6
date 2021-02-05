@@ -13,4 +13,8 @@ export class DestinosApiClient {
     elegir(d: DestinoViaje): void{
         this.store.dispatch(new ElegidoFavoritoAction(d));
     }
+    getById(id: String): DestinoViaje{
+        console.log("llamado por la clase original");
+        return null;
+    }
 }
