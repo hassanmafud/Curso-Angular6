@@ -36,7 +36,6 @@ class DestinosApiClientDecorated extends DestinosApiClient {
   templateUrl: './destino-detalle.component.html',
   styleUrls: ['./destino-detalle.component.css'],
   providers: [
-    DestinosApiClient,
     { provide: APP_CONFIG, useValue: APP_CONGIF_VALUE },
     { provide: DestinosApiClient, useClass: DestinosApiClientDecorated },
     { provide: DestinosApiClientViejo, useExisting: DestinosApiClient }
